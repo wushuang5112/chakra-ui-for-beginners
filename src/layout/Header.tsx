@@ -3,21 +3,21 @@ import { Box, Heading, Text } from "@chakra-ui/react"
 
 function Header() {
     return (
-        <Box pb='112px' as='section'>
+        <Box pb='28' as='section'>
             <Box
-                color='#F7FAFC'
-                bg='#6B46C1'
+                color='gray.50'
+                bg='purple.600'
                 pt='90px'
                 pb='198px'
-                px='32px'
+                px='8'
                 textAlign='center'>
                 <Heading
-                    fontWeight='800'
-                    fontSize='48px'>Simple pricing for your business</Heading>
+                    fontWeight='extrabold'
+                    fontSize='5xl'>Simple pricing for your business</Heading>
                 <Text
-                    fontWeight='500'
-                    pt='16px'
-                    fontSize='24px'>Plans that are carefully crafted to suit your business.</Text>
+                    fontWeight='medium'
+                    pt='4'
+                    fontSize='2xl'>Plans that are carefully crafted to suit your business.</Text>
             </Box>
         </Box>
     )
