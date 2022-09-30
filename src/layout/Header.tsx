@@ -10,14 +10,14 @@ function Header() {
                 pt='90px'
                 pb='198px'
                 px='8'
-                textAlign='center'>
+                textAlign={['left', 'left', 'center']}>
                 <Heading
                     fontWeight='extrabold'
-                    fontSize='5xl'>Simple pricing for your business</Heading>
+                    fontSize={['3xl', '3xl', '5xl']}>Simple pricing for your business</Heading>
                 <Text
                     fontWeight='medium'
                     pt='4'
-                    fontSize='2xl'>Plans that are carefully crafted to suit your business.</Text>
+                    fontSize={['lg', 'lg', '2xl']}>Plans that are carefully crafted to suit your business.</Text>
             </Box>
         </Box>
     )

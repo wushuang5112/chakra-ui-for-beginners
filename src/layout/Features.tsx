@@ -1,4 +1,4 @@
-import { Box, HStack, Icon, StackProps, Text } from '@chakra-ui/react';
+import { Box, HStack, Icon, Stack, StackProps, Text } from '@chakra-ui/react';
 import {
     HassleFreeIcon,
     MoneyBackGuaranteeIcon,
@@ -12,9 +12,9 @@ interface FeatureProps extends StackProps {
 function Feature(props: FeatureProps) {
     const { icon, children, ...rest } = props;
     return (
-        <HStack {...rest} spacing='6'>
-            <Icon as={icon} boxSize='12' />
-            <Text textAlign='left' fontSize='xl' fontWeight='bold'>
+        <HStack {...rest} spacing='6' align='start'>
+            <Icon as={icon} boxSize={{ base: '8', lg: '12' }} />
+            <Text textAlign='left' fontSize='lg' fontWeight='bold'>
                 {children}
             </Text>
         </HStack>
@@ -24,7 +24,10 @@ function Feature(props: FeatureProps) {
 export function Features() {
     return (
         <Box maxW='1024px' m='auto' pt='60px' pb='8' as='section'>
-            <HStack px='12' spacing='5'>
+            <Stack
+                px='12'
+                direction={{ base: 'column', lg: 'row' }}
+                spacing={{ base: '6', lg: '5' }}>
                 <Feature icon={MoneyBackGuaranteeIcon}>
                     30 days money back Guarantee
                 </Feature>
@@ -32,7 +35,7 @@ export function Features() {
                 <Feature icon={MonthlySubscriptionIcon}>
                     No monthly subscription Pay once and for all
                 </Feature>
-            </HStack>
+            </Stack>
         </Box>
     );
 }
